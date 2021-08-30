@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content%}
+    
+<main>
+<div class="container">
+  <h1 class="text-center pt-4">Welcome to Mohamed's Blog</h1>
+  <br>
+  <br>
+  <h2>My Posts</h2>
+  <hr>
+
+    <h3>{{blog.title}}</h3>
+
+    {{blog.pub_date|date:"F j, Y"}}
+    <br>
+    <br>
+    <img src="{{blog.image.url}}" class="img-fluid" height=200 width=200>
+    <br>
+    <p>{{blog.body|truncatechars:50 }}</p>
+  
+</div>
+  
+
+</main>
+
+{% endblock %}
